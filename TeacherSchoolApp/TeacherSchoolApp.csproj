@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09414C0D-EF04-4C0E-B9CC-045FB24299AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TeacherSchoolApp</RootNamespace>
+    <AssemblyName>TeacherSchoolApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel1">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditAllStudentAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditAllStudentAchievementsForm.Designer.cs">
+      <DependentUpon>AddEditAllStudentAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditAllTeacherAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditAllTeacherAchievementsForm.Designer.cs">
+      <DependentUpon>AddEditAllTeacherAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEducationForm.Designer.cs">
+      <DependentUpon>AddEditEducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditMyAchievementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditMyAchievementForm.Designer.cs">
+      <DependentUpon>AddEditMyAchievementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditProfDevelopmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditProfDevelopmentForm.Designer.cs">
+      <DependentUpon>AddEditProfDevelopmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditStudentAchievementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditStudentAchievementForm.Designer.cs">
+      <DependentUpon>AddEditStudentAchievementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditTeacherForm.Designer.cs">
+      <DependentUpon>AddEditTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllStudentAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllStudentAchievementsForm.Designer.cs">
+      <DependentUpon>AllStudentAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllTeachersAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllTeachersAchievementsForm.Designer.cs">
+      <DependentUpon>AllTeachersAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ExcelWriter.cs" />
+    <Compile Include="Classes\PartialCertificate.cs" />
+    <Compile Include="Classes\PartialLearnerAchievements.cs" />
+    <Compile Include="Classes\PartialLearnerClass.cs" />
+    <Compile Include="Classes\PartialParticipationGMO.cs" />
+    <Compile Include="Classes\PartialUser.cs" />
+    <Compile Include="DuplStartDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DuplStartDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuplStartDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EducationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EducationForm.Designer.cs">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AppData.cs" />
+    <Compile Include="Entities\Education.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\LearnerAchievement.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ParticipationGMO.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProfessionalDevelopment.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Role.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Specialization.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Teacher.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuth.Designer.cs">
+      <DependentUpon>FormAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPattern.Designer.cs">
+      <DependentUpon>FormPattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficsForm.Designer.cs">
+      <DependentUpon>GraficsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAchievementsForm.Designer.cs">
+      <DependentUpon>MyAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfileForm.Designer.cs">
+      <DependentUpon>MyProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionalDevelopmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionalDevelopmentForm.Designer.cs">
+      <DependentUpon>ProfessionalDevelopmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportFormAllAchievementStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFormAllAchievementStudent.Designer.cs">
+      <DependentUpon>ReportFormAllAchievementStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAchievementsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAchievementsForm.Designer.cs">
+      <DependentUpon>StudentAchievementsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachersForm.Designer.cs">
+      <DependentUpon>TeachersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEditAllStudentAchievementsForm.resx">
+      <DependentUpon>AddEditAllStudentAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditAllTeacherAchievementsForm.resx">
+      <DependentUpon>AddEditAllTeacherAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditEducationForm.resx">
+      <DependentUpon>AddEditEducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditMyAchievementForm.resx">
+      <DependentUpon>AddEditMyAchievementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditProfDevelopmentForm.resx">
+      <DependentUpon>AddEditProfDevelopmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditStudentAchievementForm.resx">
+      <DependentUpon>AddEditStudentAchievementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditTeacherForm.resx">
+      <DependentUpon>AddEditTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllStudentAchievementsForm.resx">
+      <DependentUpon>AllStudentAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllTeachersAchievementsForm.resx">
+      <DependentUpon>AllTeachersAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EducationForm.resx">
+      <DependentUpon>EducationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuth.resx">
+      <DependentUpon>FormAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPattern.resx">
+      <DependentUpon>FormPattern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficsForm.resx">
+      <DependentUpon>GraficsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAchievementsForm.resx">
+      <DependentUpon>MyAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfileForm.resx">
+      <DependentUpon>MyProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionalDevelopmentForm.resx">
+      <DependentUpon>ProfessionalDevelopmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportFormAllAchievementStudent.resx">
+      <DependentUpon>ReportFormAllAchievementStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAchievementsForm.resx">
+      <DependentUpon>StudentAchievementsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachersForm.resx">
+      <DependentUpon>TeachersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entities\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DuplStartDataSet.xsc">
+      <DependentUpon>DuplStartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet.xss">
+      <DependentUpon>DuplStartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet1.xsc">
+      <DependentUpon>DuplStartDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet1.xss">
+      <DependentUpon>DuplStartDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet2.xsc">
+      <DependentUpon>DuplStartDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet2.xss">
+      <DependentUpon>DuplStartDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet3.xsc">
+      <DependentUpon>DuplStartDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet3.xss">
+      <DependentUpon>DuplStartDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet4.xsc">
+      <DependentUpon>DuplStartDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet4.xss">
+      <DependentUpon>DuplStartDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet5.xsc">
+      <DependentUpon>DuplStartDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet5.xss">
+      <DependentUpon>DuplStartDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet6.xsc">
+      <DependentUpon>DuplStartDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet6.xss">
+      <DependentUpon>DuplStartDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet7.xsc">
+      <DependentUpon>DuplStartDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet7.xss">
+      <DependentUpon>DuplStartDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet8.xsc">
+      <DependentUpon>DuplStartDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet8.xss">
+      <DependentUpon>DuplStartDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet9.xsc">
+      <DependentUpon>DuplStartDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DuplStartDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuplStartDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DuplStartDataSet9.xss">
+      <DependentUpon>DuplStartDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Entities\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logo.png" />
+    <Resource Include="Assets\no_diploma.png" />
+    <Resource Include="Assets\no_profile_img.jpg" />
+    <Content Include="Entities\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
